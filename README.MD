@@ -12,3 +12,5 @@ sessionStorage is a browser indow object related memory
 1. If session login not done and accessing dashboard directly then redirects to login page
 2. Give Signout option to delete the session
 3. setTimeout so that after specified time the session is logged out automatically displaying an alert and redirecting to login page
+
+Ex: Bank webpage close browser then session terminates, signed out automatically
