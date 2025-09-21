@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script>
+        function bodyload()
+        {
+            if(sessionStorage.getItem("uname")===null){
+                location.href="./login.html";
+            }
+            else{
+                document.querySelector("p").innerHTML=`Hello ${sessionStorage.getItem("uname")}`;
+                setTimeout(()=>{
+                    alert("Your session timed out\n please relogin");
+                    sessionStorage.removeItem("uname");
+                    location.href="./login.html";
+                },10000);
+            }
+        }
+        function Signout()
+        {
+            sessionStorage.removeItem("uname");
+            location.href="./login.html";
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <h2>Dashbaord</h2>
+        <button onclick="Signout()">Signout</button>
+        <p></p>
+    </div>
+    
+</body>
+</html>

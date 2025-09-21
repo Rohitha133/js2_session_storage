@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script>
+        function loginclick()
+        {
+            var username=document.getElementById("UserName").value;
+            sessionStorage.setItem("uname",username);
+            location.href="./dashboard.html";
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Login</h2>
+        <dl>
+            <dt>Username</dt>
+            <dd><input id="UserName"></dd>
+        </dl>
+        <button onclick="loginclick()">Login</button>
+    </div>
+</body>
+</html>
